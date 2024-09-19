@@ -1,0 +1,292 @@
+:root {
+    --primary :#182640;
+    --bg : #0d1b2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body{
+    background-color: var(--bg);
+    color: white;
+    font-family: 'roboto',sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 0 5px white;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar .nav-logo {
+    margin-left: 20px;
+}
+
+.navbar .nav-logo img {
+    width: 30px;
+    height: auto;
+}
+
+.navbar .navbar-nav a {
+    margin: 10px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: rgb(248, 157, 12);
+    transition: linear .5s;
+}
+
+.navbar .nav-extra {
+    margin-right: 20px;
+}
+
+.navbar .nav-extra a {
+    color: white;
+}
+
+.navbar .nav-extra #menu {
+    display: none;
+}
+
+.hero {
+    margin-top: 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+.hero .news {
+    max-width: 90%;
+    margin: auto;
+}
+
+.hero .news .news-img {
+    width: 800px;
+    height:auto;
+    float: left;
+    overflow: hidden;
+}
+
+.hero .news .news-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-top: 20px;
+    
+}
+
+.hero .news a {
+    color: white;
+}
+
+.hero .news figcaption {
+    font-weight: 100;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.hero .news article {
+    max-width: 30%;
+    float: right;
+    margin-top: 70px;
+    
+}
+
+.hero .news article h3 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: .8rem;
+}
+
+.hero .news article p {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+.hero .news article .more {
+    border: 1px solid white;
+    padding: 5px;
+    font-size: .5rem;
+    border-radius: 5px;
+}
+
+.hero .news article .more:hover {
+    background-color: orangered;
+    color: black;
+    transition: ease-in .5s;
+}
+
+.clear {
+    clear: both;
+}
+
+.hero .span {
+    margin: 50px auto ;
+    text-transform: capitalize;
+    text-align: center;
+    width: max-content;
+    padding-bottom: 3px;
+    border-bottom: 1px solid white ;
+    font-size: 1.5rem;
+}
+
+.hero .thumb {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.hero .thumb .card {
+    height: 300px;
+    width: 300PX;
+    border-radius: 25px 25px 0;
+    background-color: white;
+    box-shadow: 0 0 3px white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero .thumb .card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; 
+    margin-bottom: 3px; 
+    border-radius: 20px 20px 0 0; 
+}
+.hero .thumb .card:hover img {
+    transform: scale(1.1);
+    transition: linear 300ms;
+}
+.hero .thumb .card h3 {
+    color: black;
+    font-size: .8rem;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.hero .thumb .card a {
+    color: var(--bg);
+    font-weight: 500;
+    font-size: .6rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--bg);
+}
+
+
+.hero .thumb .card a:hover {
+    background-color: var(--bg);
+    color: white;
+    transition: ease-in-out 300ms;
+}
+
+.schudle {
+    margin-top: 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+.schudle .title {
+    width: max-content;
+    margin:30px auto;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: .5px solid white;
+}
+
+.schudle .calender {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.schudle .calender .match {
+    margin-top: 50px;
+    height: 350px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.521);
+    color: black;
+    border-radius: 20px ;
+    text-align: center;
+    overflow: hidden;
+   
+}
+
+.schudle .calender .match img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.schudle .calender .match .detail {
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.schudle .calender .match .detail .name {
+    font-weight:bold;
+    
+}
+
+.schudle .calender .match .detail div {
+    margin-bottom: 10px;
+}
+
+
+.hero,
+.schudle{
+    transform: translateY(30px);
+    opacity: 0;
+    animation:showContent .5s ease-in 1s forwards 1;
+}
+
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 820px){
+    .hero .news .news-img {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+
+    .hero .news figcaption {
+        display: none;
+    }
+
+    .hero .news article {
+        float: none;
+        max-width: 50%;
+    }
+}
