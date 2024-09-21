@@ -18,6 +18,8 @@ body{
     font-family: 'roboto',sans-serif;
 }
 
+
+/* navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -67,6 +69,8 @@ body{
     display: none;
 }
 
+
+/* main */
 .hero {
     margin-top: 50px;
     width: 100%;
@@ -203,6 +207,8 @@ body{
     transition: ease-in-out 300ms;
 }
 
+
+/* schudle */
 .schudle {
     margin-top: 50px;
     width: 100%;
@@ -211,9 +217,9 @@ body{
 
 .schudle .title {
     width: max-content;
-    margin:30px auto;
+    margin:50px auto 10px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     border-bottom: .5px solid white;
 }
@@ -289,4 +295,194 @@ body{
         float: none;
         max-width: 50%;
     }
+}
+
+/* player */
+.player {
+    margin-top: 100px;
+    width: 100%;
+    padding: 5px;
+ 
+}
+
+.player .carousel {
+    max-width: 90%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+   background-color: black;
+  
+   
+}
+
+.player .carousel .item {
+   position: absolute;
+   inset: 0 0 0 0;
+
+}
+
+.player .carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   
+}
+
+.player .carousel .ava {
+    position: absolute;
+    top: 0;
+}
+
+.player .carousel .details {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+}
+
+.player .carousel .details .name {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px white;
+    color: var(--primary);
+}
+
+.player .carousel .details .no {
+    font-weight: bold;
+    font-size: 10rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+    color: var(--primary);
+}
+
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 31%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.arrow button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 1px 1px 1px black;
+    font-family: monospace;
+    color: white;
+    background-color: var(--bg);
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.arrow button:hover {
+    background-color:transparent;
+    color: var(--bg);
+    border: 1px solid var(--bg);
+}
+
+.player .list {
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+
+.player .list table{
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.player .list table th {
+    border-bottom: 1px solid white;
+}
+
+.player .list table th,table td{
+  padding: 5px;
+}
+
+.player .list table img {
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+
+.player .carousel .ava img{
+    transform: translateX(-70px);
+    filter: blur(2px);
+    opacity: 0;
+    animation: showImage .5s linear 1s forwards 1;
+}
+
+@keyframes showImage {
+    to{
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+.player .carousel .details .name,
+.player .carousel .details .no{
+    transform: translateX(70px);
+    filter: blur(2px);
+    opacity: 0;
+    animation: showText .5s linear 1s forwards 1;
+}
+
+@keyframes showText {
+    to{
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 3px white ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding: 8px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+
+
+footer .footer img {
+    width: 20px;
+}
+
+footer .footer p {
+    font-size: .8rem;
+}
+
+footer div a {
+    font-size: .8rem;
+    color: white;
+    text-transform: capitalize;
 }
