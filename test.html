@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nyoba.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="" class="logo">Coba Layout</a>
+      <div class="navbar-nav">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="" id="login"><i class="bx bx-user bx-sm"></i></a>
+        <a href="#" id="menu"><i class="bx bx-menu bx-sm"></i></a>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="content">
+        <div class="content-img">
+          <a href="">
+            <img src="asset/jude.jpg" alt="" />
+          </a>
+        </div>
+        <div class="content-tittle">
+          <a href="">
+            <h2>Jude Bellingham</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+              similique placeat in vitae ipsum, saepe dolor perferendis rem
+              nihil nobis.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/card news/endrick.webp" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis, possimus.
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/card news/courtouis.webp" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/arda.jpg" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum dolor sit, amet consectetur adipisicing.
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/news/1.webp" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/card news/news3.webp" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Deleniti.
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/jude.jpg" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga,
+              reprehenderit!
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="">
+            <div class="card-img">
+              <img src="asset/news/1.webp" alt="" />
+            </div>
+            <div class="tittle">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script>
+      const navbarNav = document.querySelector(".navbar-nav");
+
+      document.querySelector("#menu").onclick = () => {
+        navbarNav.classList.add("active");
+      };
+
+      const hamMenu = document.querySelector("#menu");
+
+      document.addEventListener("click", function (e) {
+        if (!hamMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbarNav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
