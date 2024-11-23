@@ -1,0 +1,70 @@
+.schudle {
+    background-color: cadetblue;
+}
+
+.schudle .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 400px;
+    padding: 0.5rem;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.schudle .container .card {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.schudle .container .card .card-main {
+    display: flex;
+    align-items: center;
+    background-color: brown;
+    height: 200px;
+    gap: 1rem;
+    justify-content: space-around;
+    border-radius: 20px 20px 0 0;
+}
+
+.schudle .container .card .card-main .img {
+    width: 50px;
+
+}
+
+.schudle .container .card .card-main .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.schudle .container .card .card-details {
+    background-color: burlywood;
+    margin-top: -2rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+ 
+}
+
+.schudle .container .card .card-details .list p {
+    font-size: 0.8rem;
+}
+
+.schudle .container .card .card-details .list h2 {
+    font-size: 1.2rem;
+}
+
+.schudle .container .card .card-details .list a {
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+.schudle .container .card .card-details .list h3 {
+    font-size: 1rem;
+}
+
+.schudle .container .card .card-details .date h3 {
+    font-size: 0.8rem;
+    font-weight: 100;
+}
